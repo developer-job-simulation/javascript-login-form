@@ -1,1 +1,1 @@
-# vanilla-login-form
+# <job-simulator-project-name-goes-here>
