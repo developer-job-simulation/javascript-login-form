@@ -4,9 +4,21 @@
     <meta charset="utf-8" />
     <title>JobSimulator.dev</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
   </head>
   <body>
-    <h1>Hello World</h1>
-    <script src="index.js"></script>
+    <form>
+      <!-- TODO: Fix Logo Rendering Issue-->
+      <img src="../logo.svg" />
+      <span id="success-message" hidden="true">Success!</span>
+      <span id="error-message" hidden="true">Invalid Credentials</span>
+      <label for="email">Email</label>
+      <!-- TODO: Add HTML Email Validation to Email Input -->
+      <input id="email" type="text" placeholder="Enter your email" />
+      <label for="password">Password</label>
+      <!-- TODO: Update HTML Password Input to Hide Password Visibility -->
+      <input id="password" type="text" placeholder="Enter your password" />
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
