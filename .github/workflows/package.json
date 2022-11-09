@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "jsdom": "^20.0.2",
+    "uvu": "^0.5.6"
+  }
+}
