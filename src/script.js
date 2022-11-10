@@ -21,6 +21,16 @@ addEventListener("submit", (event) => {
 
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
+  
+  //email validation
+  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+  if (reg.test(email.value) == false) {
+  
+    renderError();
+  }
+	else if (reg.test(email.value) == true) 
+        renderSuccess();
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
