@@ -25,9 +25,9 @@ You will learn and gain experience with:
 
 1. Fork this repo and clone it locally.
 1. Open index.html in your browser to see the current state of the project.
-1. Fix the issues (hints are provided as TODO comments in the code)
-1. Once your solution is complete, create a Pull Request to this repository
-1. Check if solution passes our automated tests.
+1. Fix all the issues (hints are provided as TODO comments in the code)
+1. Once all your solutions are complete, create a single Pull Request to this repository
+1. Check if your solutions passes our automated tests.
 
 ## Need help?
 
