@@ -1,4 +1,5 @@
 import { JSDOM } from "jsdom";
+import path from "node:path";
 import { setTimeout } from "timers/promises";
 import { test } from "uvu";
 import * as assert from "uvu/assert";
@@ -9,7 +10,9 @@ test("Fix Logo Rendering Issue", async () => {
     runScripts: "dangerously",
     resources: "usable",
   });
-  assert.ok(["./logo.svg", "logo.svg"].includes(dom.window.document.querySelector("img").src));
+  let imgSrc = path.parse(dom.window.document.querySelector("img").src);
+  assert.not(imgSrc.dir === "file://");
+  assert.ok(imgSrc.base === "logo.svg");
 });
 
 test("Add HTML Email Validation to Email Input", async () => {
