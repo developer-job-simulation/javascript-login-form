@@ -40,7 +40,11 @@ test("Adjust CSS so that form is centered on page", async () => {
   await setTimeout(10); // need to let css load
 
   let body = dom.window.document.querySelector("body");
-  assert.is(dom.window.getComputedStyle(body)["justify-content"], "center");
+  let form = dom.window.document.querySelector("form");
+  assert.ok(
+    dom.window.getComputedStyle(body)["justify-content"] === "center" ||
+      dom.window.getComputedStyle(form)["margin"] === "auto"
+  );
 });
 
 test("Validate User Credentials & show validation status message (Successful Auth)", async () => {
