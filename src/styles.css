@@ -8,6 +8,9 @@ body {
 form {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2rem;
