@@ -33,7 +33,6 @@ addEventListener("submit", (event) => {
 
     let login = false;
     for(const user of usersTable){
-      console.log(user);
       if(email === user.username){
         if(password === user.password){
           renderSuccess();
