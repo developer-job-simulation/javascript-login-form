@@ -27,6 +27,6 @@ addEventListener("submit", (event) => {
 
   let obj = usersTable.find(o => o.username === email);
 
-  obj.password === password ? renderSuccess() : renderError()
+  obj ? obj.password === password ? renderSuccess() : renderError() : renderError()
 
 });
