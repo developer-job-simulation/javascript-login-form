@@ -15,36 +15,32 @@ let resetMessage = () => {
   document.getElementById("error-message").hidden = true;
 };
 
-addEventListener("submit", (event) => {
+addEventListener("submit", validateUser);
+
+function validateUser(event) {
   event.preventDefault();
   resetMessage();
 
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-  // Loop through array of objects //
-  // On Each object compare both username and password to input values //
-  // if both match, return success else error //
-
   let isValidUser = false;
-
-  isValidUser = usersTable.some((obj) => {
-    return obj.username === email && obj.password === password;
+  usersTable.forEach((obj) => {
+    if (obj.username === email && obj.password === password) isValidUser = true;
   });
 
   if (isValidUser) {
     renderSuccess();
-  }
-  {
+  } else {
     renderError();
   }
+}
 
-  console.log(`email submitted: ${email}`);
-  console.log(`password submitted: ${password}`);
-  /*
+console.log(`email submitted: ${email}`);
+console.log(`password submitted: ${password}`);
+/*
     TODO:
     1. Check if the email and password are valid (using the usersTable)
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
-});
