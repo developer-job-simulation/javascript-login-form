@@ -24,8 +24,10 @@ addEventListener("submit", (event) => {
 
   let isValidUser = false;
 
-  usersTable.find((obj) => {
-    if (obj.username === email && obj.password === password) isValidUser = true;
+  usersTable.forEach((obj) => {
+    if (obj.username === email && obj.password === password) {
+      isValidUser = true;
+    }
   });
 
   if (isValidUser) {
