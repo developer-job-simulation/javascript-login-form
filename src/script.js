@@ -28,11 +28,6 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-  if(!email.includes("@")) {
-    displayTooltip();
-    return;
-  }
-
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
   
