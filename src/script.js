@@ -15,12 +15,23 @@ let resetMessage = () => {
   document.getElementById("error-message").hidden = true;
 };
 
+async function displayTooltip() {
+  document.getElementById("tooltip-text").hidden = false;
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  document.getElementById("tooltip-text").hidden = true;
+}
+
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
 
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
+
+  if(!email.includes("@")) {
+    displayTooltip();
+    return;
+  }
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);

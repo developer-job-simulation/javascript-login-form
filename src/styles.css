@@ -38,3 +38,31 @@ button {
 #error-message {
   color: red;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  width: 300px;
+  top: 100%;
+  padding: 5px;
+  position: absolute;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20%;
+  margin-left: 5px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent transparent black transparent;
+}
