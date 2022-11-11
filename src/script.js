@@ -24,7 +24,7 @@ addEventListener("submit", (event) => {
 
   let isValidUser = false;
 
-  usersTable.forEach((obj) => {
+  usersTable.find((obj) => {
     if (obj.username === email && obj.password === password) {
       isValidUser = true;
     }
@@ -35,13 +35,4 @@ addEventListener("submit", (event) => {
   } else {
     renderError();
   }
-
-  console.log(`email submitted: ${email}`);
-  console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
 });
