@@ -4,17 +4,17 @@ const usersTable = [
   // changed user.username to email
   {
     id: 1,
-    email: "hello@world.com",
+    username: "hello@world.com",
     password: "badpassword"
   },
   {
     id: 2,
-    email: "test@user.com",
+    username: "test@user.com",
     password: "badpassword"
   },
   {
     id: 3,
-    email: "email@domain.com",
+    username: "email@domain.com",
     password: "badpassword"
   },
 ];
@@ -46,9 +46,9 @@ addEventListener("submit", (event) => {
    */
   usersTable.map((user, index) => {
     // error if user email not found
-    if (email != user.email) return renderError()
+    if (email != user.username) return renderError()
     // error if password incorrect for user
-    if (password != user.password) return renderError()
+    if (password != user.username) return renderError()
 
     renderSuccess()
   })
