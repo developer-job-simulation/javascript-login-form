@@ -14,14 +14,11 @@ let resetMessage = () => {
   document.getElementById("success-message").hidden = true;
   document.getElementById("error-message").hidden = true;
 };
-
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
-
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
   /*
@@ -30,4 +27,15 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+  let isUser = false;
+  usersTable.forEach((user) => {
+    if (user.username === email && user.password === password) {
+      isUser = true;
+    }
+  });
+  if (isUser) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
 });
