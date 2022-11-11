@@ -28,6 +28,12 @@ addEventListener("submit", (event) => {
     if (obj.username === email && obj.password === password) isValidUser = true;
   });
 
+  if (isValidUser) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
+
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
   /*
