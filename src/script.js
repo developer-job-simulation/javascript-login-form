@@ -1,5 +1,4 @@
 const usersTable = [
-  // Note: This is a fake table for educational purposes. Never store user credentials in plain text.
   { id: 1, username: "hello@world.com", password: "badpassword" },
   { id: 2, username: "test@user.com", password: "badpassword" },
   { id: 3, username: "email@domain.com", password: "badpassword" },
@@ -24,6 +23,14 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
+
+  for(users in usersTable){
+    if(users.username == email && users.password == password){
+      renderSuccess();
+    } else {
+      renderError();
+    }
+  }
   /*
     TODO:
     1. Check if the email and password are valid (using the usersTable)
