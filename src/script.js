@@ -32,7 +32,11 @@ addEventListener("submit", (event) => {
     3. If they are not, call renderError()
    */
   const user = usersTable.find(user => user.username === email && user.password === password);
-  user ? renderSuccess() : renderError();
+  if (user) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
 
 
 });
