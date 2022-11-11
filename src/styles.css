@@ -1,23 +1,48 @@
-body {
-  height: 100vh;
-  display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
   align-items: center;
+  background-color: #efefef;
 }
 
 form {
+  background-color: white;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  padding: 2rem;
+  padding: 3rem 5rem;
   border-radius: 2rem;
+  border-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 form > img {
   margin: auto;
+}
+
+form > button {
+  margin-top: 25px;
+  background-color: #634dff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+}
+
+form > input {
+  margin-top: 5px;
+  padding: 10px;
 }
 
 label {
