@@ -32,7 +32,7 @@ addEventListener("submit", (event) => {
    */
    let isSuccess = false;
    for (let i = 0; i < usersTable.length; i++){
-   	   if (usersTable[i]['username'].toLowerCase()==email.toLowerCase() && usersTable[i]['password'].toLowerCase()==password.toLowerCase()){
+   	   if (usersTable[i]['username'].toLowerCase()==email.toLowerCase() && usersTable[i]['password']==password){
 		renderSuccess();
 		isSuccess = true;
 		break;}}
