@@ -30,4 +30,10 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+  for(let x=0; x<usersTable.length()-1; x++){
+    if(!email == usersTable.at(x).username && password == usersTable.at(x).password){
+      renderError();
+    }
+
+  }
 });
