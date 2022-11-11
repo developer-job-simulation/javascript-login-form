@@ -22,6 +22,22 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
+  // Loop through array of objects //
+  // On Each object compare both username and password to input values //
+  // if both match, return success else error //
+
+  for (let i = 0; i < usersTable.length; i++) {
+    console.log(i);
+    if (
+      usersTable[i].username === email &&
+      usersTable[i].password === password
+    ) {
+      return renderSuccess();
+    } else {
+      return renderError();
+    }
+  }
+
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
   /*
