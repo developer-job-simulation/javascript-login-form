@@ -2,7 +2,7 @@ const usersTable = [
   // Note: This is a fake table for educational purposes. Never store user credentials in plain text.
   { id: 1, username: "hello@world.com", password: "badpassword" },
   { id: 2, username: "test@user.com", password: "badpassword" },
-  { id: 3, username: "email@domain.com", password: "badpassword" },
+  { id: 3, username: "  ", password: "badpassword" },
 ];
 let renderSuccess = () => {
   document.getElementById("success-message").hidden = false;
@@ -22,6 +22,8 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
+
+
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
   /*
@@ -30,4 +32,11 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+
+  let user = usersTable.find((user) => user.username === email);
+  if (user && user.password === password) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
 });
