@@ -38,13 +38,13 @@ addEventListener("submit", (event) => {
       2. If they are, call renderSuccess()
       3. If they are not, call renderError()
      */
-    let userIsValid = false;
+    let userFound = false;
     usersTable.forEach((x) => {
         if (x.username === email && x.password === password) {
-            userIsValid = true;
+            userFound = true;
         }
     });
-    if (userIsValid) {
+    if (userFound) {
         renderSuccess();
     } else {
         renderError();
