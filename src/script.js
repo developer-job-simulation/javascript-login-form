@@ -54,8 +54,5 @@ addEventListener("submit", (event) => {
   })
 
 
-  setTimeout(() => {
-    resetMessage()
-  },
-    5000)
+
 });
