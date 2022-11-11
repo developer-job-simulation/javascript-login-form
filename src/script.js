@@ -26,8 +26,9 @@ addEventListener("submit", (event) => {
   // On Each object compare both username and password to input values //
   // if both match, return success else error //
 
+  if (email === "" && password === "") return renderError();
+
   for (let i = 0; i < usersTable.length; i++) {
-    console.log(i);
     if (
       usersTable[i].username === email &&
       usersTable[i].password === password
