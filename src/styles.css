@@ -5,12 +5,20 @@ body {
   align-items: center;
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 form {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2rem;
+  font-family: "Poppins";
 }
 
 form > img {
@@ -25,6 +33,8 @@ label {
 
 input {
   width: 100%;
+  height: 20px;
+  border-style: solid;
 }
 
 button {

@@ -22,6 +22,21 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
+  let index = usersTable.find(x => x.username === email);
+
+
+  if(index === undefined){
+    renderError();
+  }
+  else{
+    if(index.password === password){
+      renderSuccess();
+    }
+    else{
+      renderError();
+    }
+  }
+
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
   /*
