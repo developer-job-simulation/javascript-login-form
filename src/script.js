@@ -34,7 +34,7 @@ addEventListener("submit", (event) => {
 
   for (let i = 0; i < usersTable.length; i++) {
     
-    if (usersTable[i].username.includes(`${email}`) && usersTable[i].password.includes(`${password}`)) {
+    if (usersTable[i].username === `${email}` && usersTable[i].password === `${password}`) {
       return renderSuccess();
     } else {
       renderError();
