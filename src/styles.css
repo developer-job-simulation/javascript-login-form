@@ -9,6 +9,7 @@ form {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+  margin: auto;
   padding: 2rem;
   border-radius: 2rem;
 }
