@@ -31,3 +31,12 @@ addEventListener("submit", (event) => {
     3. If they are not, call renderError()
    */
 });
+
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
