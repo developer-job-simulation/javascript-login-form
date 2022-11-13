@@ -26,9 +26,9 @@ addEventListener("submit", (event) => {
   console.log(`password submitted: ${password}`);
 
   if (
-    usersTable.find((user) => {
-      return user.username === email && user.password === password;
-    })
+    usersTable.find(
+      (user) => user.username === email && user.password === password
+    )
   ) {
     renderSuccess();
   } else renderError();
