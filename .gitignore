@@ -104,3 +104,8 @@ dist
 .tern-port
 
 .DS_Store
+
+.idea/vcs.xml
+.idea/vanilla-form.iml
+.idea/modules.xml
+
