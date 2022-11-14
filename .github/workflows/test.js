@@ -77,8 +77,8 @@ test("Validate User Credentials & show validation status message (Bad Auth)", as
   dom.window.document.getElementById("password").value = "badpassword";
   dom.window.document.querySelector("button").dispatchEvent(new dom.window.MouseEvent("click"));
 
-  assert.is(dom.window.document.getElementById("success-message").hidden, false);
-  assert.is(dom.window.document.getElementById("error-message").hidden, true);
+  assert.is(dom.window.document.getElementById("success-message").hidden, true);
+  assert.is(dom.window.document.getElementById("error-message").hidden, false);
 });
 
 test.run();
