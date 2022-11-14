@@ -31,13 +31,8 @@ addEventListener("submit", (event) => {
     3. If they are not, call renderError()
    */
 
-    for (let i = 0; i < usersTable.length; i++) {
-
-      if (usersTable[i].username === `${email}` && usersTable[i].password === `${password}`) {
-        return renderSuccess();
-      } else {
-        renderError();
-      }
-  
-    }
+    let valid = usersTable.map((user) => {
+      return email === user.username && password === user.password
+    })
+    return valid.includes(true) ? renderSuccess() : renderError() 
 });
