@@ -34,5 +34,5 @@ addEventListener("submit", (event) => {
     let valid = usersTable.map((user) => {
       return email === user.username && password === user.password
     })
-    return valid.find(true) ? renderSuccess() : renderError() 
+    return valid.includes(true) ? renderSuccess() : renderError() 
 });
