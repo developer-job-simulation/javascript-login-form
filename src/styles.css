@@ -1,40 +1,41 @@
 body {
-  height: 100vh;
-  display: flex;
-  /* TODO: Adjust CSS so that form is centered on page */
-  align-items: center;
+    height: 100vh;
+    display: flex;
+    /* TODO: Adjust CSS so that form is centered on page */
+    align-items: center;
+    justify-content: center;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  padding: 2rem;
-  border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 2rem;
 }
 
 form > img {
-  margin: auto;
+    margin: auto;
 }
 
 label {
-  text-align: left;
-  width: 100%;
-  padding: 1rem 0 0 0;
+    text-align: left;
+    width: 100%;
+    padding: 1rem 0 0 0;
 }
 
 input {
-  width: 100%;
+    width: 100%;
 }
 
 button {
-  margin: 1rem 0 0 0;
+    margin: 1rem 0 0 0;
 }
 
 #success-message {
-  color: green;
+    color: green;
 }
 
 #error-message {
-  color: red;
+    color: red;
 }
