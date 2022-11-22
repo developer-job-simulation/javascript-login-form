@@ -18,7 +18,7 @@ let resetMessage = () => {
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
-
+  let found = 0;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
@@ -30,4 +30,18 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+
+  for (let i = 0; i < usersTable.length; i++) {
+    if (usersTable[i].username === email && usersTable[i].password === password) {
+      found = 1;
+      break;
+    }
+  }
+
+  if (found) {
+    renderSuccess();
+  }
+  else {
+    renderError();
+  }
 });
