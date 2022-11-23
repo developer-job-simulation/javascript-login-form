@@ -4,6 +4,8 @@ const usersTable = [
   { id: 2, username: "test@user.com", password: "badpassword" },
   { id: 3, username: "email@domain.com", password: "badpassword" },
 ];
+
+let myKeys = []
 let renderSuccess = () => {
   document.getElementById("success-message").hidden = false;
 };
@@ -22,12 +24,31 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-  console.log(`email submitted: ${email}`);
-  console.log(`password submitted: ${password}`);
+
+  // let checker = user.map(x => x.)
+
+  // user.forEach(x => x.username.includes(email))){return renderSuccess()}
+  // else{console.log(password)}
+
+   
+  for(let i=0; i<usersTable.length;i++){
+    if(email === usersTable[i].username && password === usersTable[i].password){renderSuccess()}
+    else{renderError()} 
+  }
+
+
+  // if( user.forEach(x => x.username.includes(email))){return renderSuccess()}
+
+  // console.log(`email submitted: ${email}`);
+  // console.log(`password submitted: ${password}`);
+  // console.log(user[1].username)
   /*
     TODO:
     1. Check if the email and password are valid (using the usersTable)
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+  
+
+
 });
