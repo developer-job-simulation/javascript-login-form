@@ -22,18 +22,19 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value
   let password = document.getElementById("password").value
   
-  if (usersTable.find(obj => (obj.password === password && obj.username === email))) {
-    renderSuccess();
-  } else {
-    renderError();
-  }
+  let success = false;
+    for(var i = 0; i < usersTable.length; i++){
+      if(usersTable[i].username == email && usersTable[i].password == password){
+        renderSuccess();
+        success = true;
+        return;
+      }
+    }
+    if(!success){
+      renderError();
+    }
   
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
+
 });
