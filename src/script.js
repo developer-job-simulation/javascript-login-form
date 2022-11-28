@@ -22,17 +22,29 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value
   let password = document.getElementById("password").value
   
-  let success = false;
-    for(var i = 0; i < usersTable.length; i++){
-      if(usersTable[i].username == email && usersTable[i].password == password){
-        renderSuccess();
-        success = true;
-        return;
-      }
-    }
-    if(!success){
-      renderError();
-    }
+  let check = false;
+
+  usersTable.forEach(e => {
+    if(e.username == email && e.password == password){
+           renderSuccess();
+           check = true;
+           return;
+         }
+       if(!check){
+         renderError();
+       }
+  })
+
+    // for(var i = 0; i < usersTable.length; i++){
+    //   if(usersTable[i].username == email && usersTable[i].password == password){
+    //     renderSuccess();
+    //     success = true;
+    //     return;
+    //   }
+    // }
+    // if(!success){
+    //   renderError();
+    // }
   
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
