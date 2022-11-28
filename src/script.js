@@ -33,10 +33,13 @@ addEventListener("submit", (event) => {
    */
 
   for (let i = 0; i < usersTable.length; i++) {
+
+    console.log(email == usersTable[i].username && password == usersTable[i].password);
+
     if (email == usersTable[i].username && password == usersTable[i].password) {
-      renderSuccess();
+     return renderSuccess();
     } else {
-      renderError();
+     return renderError();
     }
   }
 });
