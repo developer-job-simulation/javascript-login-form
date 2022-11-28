@@ -22,11 +22,14 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value
   let password = document.getElementById("password").value
   
-  const check = usersTable.find(user => {
-    return user.username === email && user.password == password;
+  let check = usersTable.find(user => {
+    return user;
   })
-  console.log(check);
-  check == undefined ? renderError():renderSuccess();
+   if(check.username===email && check.password===password){
+    renderSuccess()
+   }else{
+    renderError()
+   }
   
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
