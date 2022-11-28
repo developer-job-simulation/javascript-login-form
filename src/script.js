@@ -19,14 +19,14 @@ addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
 
-  let email = document.getElementById("email").value.toLowerCase();
-  let password = document.getElementById("password").value.toLowerCase();
+  let email = document.getElementById("email").value
+  let password = document.getElementById("password").value
   
-  const check = usersTable.find(e => {
-    return e.username === email && e.password === password;
+  const check = usersTable.find(user => {
+    return user.username === email && user.password == password;
   })
-  
-  check ? renderSuccess(): renderError()
+  console.log(check);
+  check == undefined ? renderError():renderSuccess();
   
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
