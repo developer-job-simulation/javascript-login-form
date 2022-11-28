@@ -22,7 +22,7 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value
   let password = document.getElementById("password").value
   
-  if (usersTable.find(user => (user.password === password && user.username === email))) {
+  if (usersTable.find(obj => (obj.password === password && obj.username === email))) {
     renderSuccess();
   } else {
     renderError();
