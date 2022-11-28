@@ -19,8 +19,8 @@ addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
 
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
+  let email = document.getElementById("email").value.toLowerCase();
+  let password = document.getElementById("password").value.toLowerCase();
   
   const check = usersTable.find(e => {
     return e.username === email && e.password === password;
