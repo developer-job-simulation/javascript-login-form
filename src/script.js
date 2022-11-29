@@ -24,6 +24,11 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
+  // console.log(
+  //   usersTable.find(
+  //     (obj) => obj.password === password && obj.username === email
+  //   )
+  // );
 
   if (
     usersTable.find(
@@ -31,6 +36,7 @@ addEventListener("submit", (event) => {
     )
   ) {
     renderSuccess();
+    return false;
   } else {
     renderError();
   }
