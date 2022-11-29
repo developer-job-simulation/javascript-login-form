@@ -27,7 +27,7 @@ addEventListener("submit", (event) => {
   resetMessage();
 
   let email = document.getElementById("email").value;
-  let userPassword = document.getElementById("password").value;
+  let password = document.getElementById("password").value;
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
@@ -37,7 +37,7 @@ addEventListener("submit", (event) => {
     // that satisfies the provided testing function. If no values
     // satisfy the testing function, undefined is returned.
     usersTable.find(
-      (obj) => obj.password === userPassword && obj.username === email
+      (obj) => obj.password === password && obj.username === email
     )
   ) {
     renderSuccess();
