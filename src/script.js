@@ -27,16 +27,21 @@ addEventListener("submit", (event) => {
   resetMessage();
 
   let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
+  let userPassword = document.getElementById("password").value;
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
 
-  for (let i = 0; i < usersTable.length; i++) {
-    if (email == usersTable[i].username && password == usersTable[i].password) {
-      return renderSuccess();
-    } else {
-      return renderError();
-    }
+  if (
+    // The find() method returns the first element in the provided array
+    // that satisfies the provided testing function. If no values
+    // satisfy the testing function, undefined is returned.
+    usersTable.find(
+      (obj) => obj.password === userPassword && obj.username === email
+    )
+  ) {
+    renderSuccess();
+  } else {
+    renderError();
   }
 });
