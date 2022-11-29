@@ -1,10 +1,3 @@
-/*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
-
 const usersTable = [
   // Note: This is a fake table for educational purposes. Never store user credentials in plain text.
   { id: 1, username: "hello@world.com", password: "badpassword" },
@@ -33,9 +26,6 @@ addEventListener("submit", (event) => {
   console.log(`password submitted: ${password}`);
 
   if (
-    // The find() method returns the first element in the provided array
-    // that satisfies the provided testing function. If no values
-    // satisfy the testing function, undefined is returned.
     usersTable.find(
       (obj) => obj.password === password && obj.username === email
     )
