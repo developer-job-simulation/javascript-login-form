@@ -24,7 +24,10 @@ addEventListener("submit", (event) => {
     let auth = false;
 
     for (let i = 0; i < usersTable.length; i++) {
-        if (usersTable[i].username === email && usersTable[i].password === password) auth = true;
+        if (usersTable[i].username === email && usersTable[i].password === password) {
+            auth = true;
+            break;
+        }
     }
 
     auth ? renderSuccess() : renderError();
