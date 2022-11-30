@@ -30,14 +30,9 @@ addEventListener("submit", (event) => {
   //   )
   // );
 
-  if (
-    usersTable.find(
-      (obj) => obj.password === password && obj.username === email
-    )
-  ) {
-    renderSuccess();
-    return false;
-  } else {
-    renderError();
+  let user = usersTable.find((obj) => obj.username === email);
+  if (!user) {
+    return renderError();
   }
+  return user.password === password ? renderSuccess() : renderError();
 });
