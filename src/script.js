@@ -31,14 +31,11 @@ addEventListener("submit", (event) => {
     3. If they are not, call renderError()
    */
   for(let i = 0; i < usersTable.length; i++){
-    if(email === usersTable[i].username){
+    if(email === usersTable[i].username || password === usersTable[i].password){
       renderError();
       break;
+    }else{
+      renderSuccess();
     }
-    if(password === usersTable[i].password){
-      renderError();
-      break;
-    }
-    renderSuccess();
   }
 });
