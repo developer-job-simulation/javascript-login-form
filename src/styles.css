@@ -13,6 +13,13 @@ form {
   border-radius: 2rem;
 }
 
+.formSingleItem {
+  display: flex;
+  flex-direction: row;
+  /*align-items: center;*/
+  padding: 4px;
+}
+
 form > img {
   margin: auto;
 }
@@ -32,7 +39,7 @@ input {
 }
 
 #showhide {
-  
+  width: 10%;
 }
 
 input:valid {

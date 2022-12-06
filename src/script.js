@@ -30,6 +30,15 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+  let succeeded = false;
+  for(let acc of usersTable) {
+    if (email == acc["username"]
+    && password == acc["password"]) {
+      succeeded = true;
+      renderSuccess();
+    }
+  }
+  if (!succeeded) renderError();
 });
 
 function passwordShowHide(eleName) {
