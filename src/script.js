@@ -32,8 +32,8 @@ addEventListener("submit", (event) => {
    */
   let succeeded = false;
   for(let acc of usersTable) {
-    if (email === acc["username"]
-    && password === acc["password"]) {
+    if (email == acc["username"]
+    && password == acc["password"]) {
       succeeded = true;
       renderSuccess();
     }
