@@ -27,6 +27,24 @@ input {
   width: 100%;
 }
 
+#password { 
+  width: 80%;
+}
+
+#showhide {
+  
+}
+
+input:valid {
+  border: 2px solid black;
+  border-bottom-right-radius: 30%;
+}
+
+input:invalid {
+  border: 2px solid red;
+  border-bottom-right-radius: 30%;
+}
+
 button {
   margin: 1rem 0 0 0;
 }

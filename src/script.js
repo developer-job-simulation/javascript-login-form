@@ -31,3 +31,12 @@ addEventListener("submit", (event) => {
     3. If they are not, call renderError()
    */
 });
+
+function passwordShowHide(eleName) {
+  var x = document.getElementById(eleName);
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+} 

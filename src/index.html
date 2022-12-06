@@ -13,10 +13,10 @@
       <span id="error-message" hidden="true">Invalid Credentials</span>
       <label for="email">Email</label>
       <!-- TODO: Add HTML Email Validation to Email Input -->
-      <input id="email" type="text" placeholder="Enter your email" />
+      <input id="email" type="text" placeholder="Enter your email" required min="1" max="60" pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])" />
       <label for="password">Password</label>
-      <!-- TODO: Update HTML Password Input to Hide Password Visibility -->
-      <input id="password" type="text" placeholder="Enter your password" />
+      <input id="password" type="password" placeholder="Enter your password" required min="1" max="60" /> 
+      <input id="showhide" type="checkbox" onclick="passwordShowHide('password')">
       <button>Submit</button>
     </form>
   </body>
