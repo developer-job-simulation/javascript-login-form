@@ -2,11 +2,13 @@ body {
   height: 100vh;
   display: flex;
   /* TODO: Adjust CSS so that form is centered on page */
+  height: 100vh;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 form {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
