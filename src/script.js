@@ -32,7 +32,7 @@ addEventListener("submit", (event) => {
    */
 
   for (let i = 0; i < usersTable.length; i++){
-    if (usersTable[i].username == email && usersTable[i].password == password) {
+    if (usersTable[i].username === email && usersTable[i].password === password) {
       renderSuccess();
       return;
     }
