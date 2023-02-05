@@ -38,3 +38,10 @@ button {
 #error-message {
   color: red;
 }
+
+/* my stuff*/
+
+.center {
+  margin: auto;
+
+}
