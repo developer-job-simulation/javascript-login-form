@@ -33,7 +33,7 @@ You will learn and gain experience with:
 
 The best way to ask for help is to ask our Discord community.
 
-[Click here to join the Jobsimulator.dev Discord](https://discord.gg/6VsSMZaM7q).
+[Click here to join the Jobsimulator.dev Discord](https://discord.com/invite/7cAkUcKbjB).
 
 ## Want more challenges?
 
