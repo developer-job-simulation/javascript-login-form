@@ -1,6 +1,6 @@
 ![](Vanilla-Login-Form-by-Jobsimulator.svg)
 
-# Vanilla Login Form by Jobsimulator.dev
+# JavaScript Login Form by Jobsimulator.Dev
 
 This is a simple login form made with vanilla JavaScript, HTML, and CSS. Your job is to fix 5 issues:
 
