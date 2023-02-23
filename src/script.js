@@ -24,6 +24,16 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
+
+  const isValid = usersTable.some((val) => {
+    return val.username == email && val.password == password;
+  });
+
+  if (isValid) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
   /*
     TODO:
     1. Check if the email and password are valid (using the usersTable)
