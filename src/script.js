@@ -25,7 +25,7 @@ addEventListener("submit", (event) => {
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
 
-  const isValid = usersTable.some((val) => {
+  const isValid = usersTable.find((val) => {
     return val.username == email && val.password == password;
   });
 
