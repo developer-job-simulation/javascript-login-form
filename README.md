@@ -2,6 +2,13 @@
 
 # JavaScript Login Form by Jobsimulator.Dev
 
+<p align='center'>
+  <a href='https://discord.com/invite/ngtXEyXsfk'>
+    <img src='https://img.shields.io/badge/-Discord-yellowgreen?logo=discord&logoColor=white&color=7289da'/>
+  </a>
+</p>
+
+
 This is a simple login form made with vanilla JavaScript, HTML, and CSS. Your job is to fix 5 issues:
 
 1. [Fix Logo Rendering Issue](https://github.com/developer-job-simulation/vanilla-login-form/issues/2)
