@@ -2,12 +2,7 @@
 
 # JavaScript Login Form by Jobsimulator.Dev
 
-<p align='center'>
-  <a href='https://discord.com/invite/ngtXEyXsfk'>
-    <img src='https://img.shields.io/badge/-Discord-yellowgreen?logo=discord&logoColor=white&color=7289da'/>
-  </a>
-</p>
-
+![Discord](https://img.shields.io/discord/968893691769000027?color=7289da&label=Discord&logo=discord&logoColor=white&style=for-the-badge)
 
 This is a simple login form made with vanilla JavaScript, HTML, and CSS. Your job is to fix 5 issues:
 
