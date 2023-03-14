@@ -1,6 +1,8 @@
 ![](Vanilla-Login-Form-by-Jobsimulator.svg)
 
-# Vanilla Login Form by Jobsimulator.dev
+# JavaScript Login Form by Jobsimulator.Dev
+
+![Discord](https://img.shields.io/discord/968893691769000027?color=7289da&label=Discord&logo=discord&logoColor=white&style=for-the-badge)
 
 This is a simple login form made with vanilla JavaScript, HTML, and CSS. Your job is to fix 5 issues:
 
@@ -25,15 +27,15 @@ You will learn and gain experience with:
 
 1. Fork this repo and clone it locally.
 1. Open index.html in your browser to see the current state of the project.
-1. Fix the issues (hints are provided as TODO comments in the code)
-1. Once your solution is complete, create a Pull Request to this repository
-1. Check if solution passes our automated tests.
+1. Fix all the issues (hints are provided as TODO comments in the code)
+1. Once all your solutions are complete, create a single Pull Request to this repository
+1. Check if your solutions passes our automated tests.
 
 ## Need help?
 
 The best way to ask for help is to ask our Discord community.
 
-[Click here to join the Jobsimulator.dev Discord](https://discord.gg/6VsSMZaM7q).
+[Click here to join the Jobsimulator.dev Discord](https://discord.com/invite/7cAkUcKbjB).
 
 ## Want more challenges?
 
