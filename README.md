@@ -39,4 +39,5 @@ The best way to ask for help is to ask our Discord community.
 
 ## Want more challenges?
 
-Browse our [list of challenges](https://jobsimulator.gumroad.com/) and [join our Discord](https://discord.gg/6VsSMZaM7q) to get notified when new challenges are released.
+Browse our [challenges](https://jobsimulator.dev/) and [join our Discord](https://discord.gg/6VsSMZaM7q) to get notified when new challenges are released.
+
