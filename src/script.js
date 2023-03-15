@@ -31,3 +31,12 @@ addEventListener("submit", (event) => {
     3. If they are not, call renderError()
    */
 });
+
+
+
+if ((username = "hello@world.com" || "test@user.com" || "email@domain.com") || (password = "badpassword")) {
+  renderSuccess();
+} else {
+  renderError;
+}
+
