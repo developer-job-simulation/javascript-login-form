@@ -24,10 +24,23 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
+
+  let user = null;
+  for (let i = 0; i < usersTable.length; i++) {
+    if (
+      usersTable[i].username === email &&
+      usersTable[i].password === password
+    ) {
+      user = usersTable[i];
+      break;
+    }
+  }
+
+  if (user) {
+    console.log("Login successful! User ID:", user.id);
+    renderSuccess();
+  } else {
+    console.log("Login failed. Invalid email or password.");
+    renderError();
+  }
 });
