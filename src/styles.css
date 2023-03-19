@@ -1,8 +1,9 @@
 body {
   height: 100vh;
   display: flex;
-  /* TODO: Adjust CSS so that form is centered on page */
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 form {
@@ -11,6 +12,13 @@ form {
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2rem;
+}
+
+.formSingleItem {
+  display: flex;
+  flex-direction: row;
+  /*align-items: center;*/
+  padding: 8px;
 }
 
 form > img {
@@ -25,6 +33,24 @@ label {
 
 input {
   width: 100%;
+}
+
+#password { 
+  width: 80%;
+}
+
+#showhide {
+  width: 10%;
+}
+
+input:valid {
+  border: 2px solid black;
+  border-bottom-right-radius: 30%;
+}
+
+input:invalid {
+  border: 2px solid red;
+  border-bottom-right-radius: 30%;
 }
 
 button {

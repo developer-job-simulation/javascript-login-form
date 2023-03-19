@@ -8,17 +8,25 @@
   </head>
   <body>
     <form>
-      <!-- TODO: Fix Logo Rendering Issue-->
-      <img src="/logo.png" />
+      <img src="./logo.svg" />
       <span id="success-message" hidden="true">Success!</span>
       <span id="error-message" hidden="true">Invalid Credentials</span>
-      <label for="email">Email</label>
-      <!-- TODO: Add HTML Email Validation to Email Input -->
-      <input id="email" type="text" placeholder="Enter your email" />
-      <label for="password">Password</label>
-      <!-- TODO: Update HTML Password Input to Hide Password Visibility -->
-      <input id="password" type="text" placeholder="Enter your password" />
-      <button>Submit</button>
+
+      <div id="formSingleItem">
+        <label for="email">Email</label>
+        <!-- TODO: Add HTML Email Validation to Email Input -->
+        <input id="email" type="email" placeholder="Enter your email" required min="1" max="60" />
+      </div>
+
+      <div id="formSingleItem">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter your password" required min="1" max="60" /> 
+        <input id="showhide" type="checkbox" onclick="passwordShowHide('password')" />
+      </div>
+
+      <div id="formSingleItem">
+        <button>Submit</button>
+      </div>
     </form>
   </body>
 </html>
