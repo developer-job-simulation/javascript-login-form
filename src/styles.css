@@ -3,6 +3,14 @@ body {
   display: flex;
   /* TODO: Adjust CSS so that form is centered on page */
   align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 form {
@@ -11,6 +19,7 @@ form {
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2rem;
+  font-family: "Poppins";
 }
 
 form > img {
@@ -25,6 +34,8 @@ label {
 
 input {
   width: 100%;
+  height: 20px;
+  border-style: solid;
 }
 
 button {
