@@ -15,6 +15,13 @@ let resetMessage = () => {
   document.getElementById("error-message").hidden = true;
 };
 
+function isEmailPasswordValid(email, password) {
+  let user = usersTable.find(user => user.username === email)
+  if (!user) return false
+
+  return user.password === password
+}
+
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
@@ -24,10 +31,7 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
+
+  const isValid = isEmailPasswordValid(email, password)
+  isValid ? renderSuccess() : renderError()
 });
