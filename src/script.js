@@ -30,4 +30,24 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+  if (!validEmailEntry(email)) {
+    const emailInput = document.getElementById("email")
+    emailInput.setCustomValidity(`Please include an '@' in the email address. '${email}' is missing an '@'.`)
+    emailInput.reportValidity()
+  }
+  if (isValidUser(email, password, usersTable)) {
+    renderSuccess()
+  } else {
+    renderError()
+  }
 });
+
+function validEmailEntry(email) {
+  return (email.includes('@') ? true : false)
+}
+
+function isValidUser(email, password, usersTable) {
+  const userObj = usersTable.find(user => user.username == email)
+  if (!userObj) return false 
+  return userObj.password == password ? true : false 
+}
