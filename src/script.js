@@ -25,13 +25,14 @@ addEventListener("submit", (event) => {
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
 
-  const currUser = usersTable.filter((a) => a.username == email);
-  if (currUser.password == password) {
-    renderSuccess();
-  } else {
-    renderError();
-  }
-
+  let valid = false;
+  usersTable.forEach(a => {
+  if (a.password == password && a.email == email) {
+    valid = true;
+   }
+  
+  valid ? renderSuccess() : renderError()
+  
   /*
     DONE
     TODO:
