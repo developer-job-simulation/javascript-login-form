@@ -6,7 +6,7 @@
 
 This is a simple login form made with vanilla JavaScript, HTML, and CSS. Your job is to fix 5 issues:
 
-1. [Fix Logo Rendering Issue](https://github.com/developer-job-simulation/vanilla-login-form/issues/2)
+~~1. [Fix Logo Rendering Issue](https://github.com/developer-job-simulation/vanilla-login-form/issues/2)~~
 1. [Add HTML Email Validation to Email Input](https://github.com/developer-job-simulation/vanilla-login-form/issues/3)
 1. [Update HTML Password Input to Hide Password Visibility](https://github.com/developer-job-simulation/vanilla-login-form/issues/4)
 1. [Adjust CSS so that form is centered on page](https://github.com/developer-job-simulation/vanilla-login-form/issues/5)
