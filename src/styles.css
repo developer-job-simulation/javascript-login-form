@@ -7,6 +7,7 @@ body {
 
 form {
   display: flex;
+  margin: auto;
   flex-direction: column;
   border: 1px solid black;
   padding: 2rem;
