@@ -2,7 +2,7 @@ body {
   height: 100vh;
   display: flex;
   /* TODO: Adjust CSS so that form is centered on page */
-  align-items: center;
+  justify-content: center;
 }
 
 form {
