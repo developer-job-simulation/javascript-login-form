@@ -30,4 +30,10 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+
+   renderSuccess()
+
+   renderError()
+
+    
 });
