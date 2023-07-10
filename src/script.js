@@ -15,10 +15,6 @@ let resetMessage = () => {
   document.getElementById("error-message").hidden = true;
 };
 
-const areCredentialsValid = (usersTable, email, password) => {
-  return usersTable.some(user => user.username === email && user.password === password)
-}
-
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
@@ -29,8 +25,12 @@ addEventListener("submit", (event) => {
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
 
-  if (areCredentialsValid(usersTable, email, password)) {
+  const isValidEmail = usersTable.filter(user => user.username === email).length > 0;
+  const isValidPassword = usersTable.filter(user => user.password === password).length > 0;
+
+  if (isValidEmail && isValidPassword) {
     return renderSuccess()
+  } else {
+    return renderError()
   }
-  return renderError()
 });
