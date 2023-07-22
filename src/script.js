@@ -25,12 +25,11 @@ addEventListener("submit", (event) => {
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
 
-  //Cliend side validation
+  //Client side validation
   let credsMatch = 0;
 
   usersTable.forEach((user) => {
     if (email === user.username && password === user.password) credsMatch += 1;
-    console.log(credsMatch)
   })
 
   if (credsMatch === 1) renderSuccess();
