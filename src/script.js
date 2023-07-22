@@ -24,10 +24,15 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
+
+  //Cliend side validation
+  let credsMatch = 0;
+
+  usersTable.forEach((user) => {
+    if (email === user.username && password === user.password) credsMatch += 1;
+    console.log(credsMatch)
+  })
+
+  if (credsMatch === 1) renderSuccess();
+  else renderError();
 });
