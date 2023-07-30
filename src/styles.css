@@ -1,7 +1,7 @@
 body {
   height: 100vh;
   display: flex;
-  /* TODO: Adjust CSS so that form is centered on page */
+  justify-content: center;
   align-items: center;
 }
 
@@ -13,7 +13,7 @@ form {
   border-radius: 2rem;
 }
 
-form > img {
+form>img {
   margin: auto;
 }
 
