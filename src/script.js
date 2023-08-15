@@ -24,6 +24,20 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
+
+  console.log(usersTable)
+  
+  usersTable.forEach(user => {
+    
+      if(user.password === password) {
+        console.log(user.password)
+        renderSuccess()
+      } else {
+        console.log(user.password)
+        renderError()
+      }
+    
+  });
   /*
     TODO:
     1. Check if the email and password are valid (using the usersTable)
