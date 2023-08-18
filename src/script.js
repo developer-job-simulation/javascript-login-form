@@ -4,18 +4,24 @@ const usersTable = [
   { id: 2, username: "test@user.com", password: "badpassword" },
   { id: 3, username: "email@domain.com", password: "badpassword" },
 ];
+
+const success = document.querySelector('#success-message')
+const error = document.querySelector('#error-message')
+
 let renderSuccess = () => {
-  document.getElementById("success-message").hidden = false;
+  success.hidden = false
+  error.hidden = true
 };
 let renderError = () => {
-  document.getElementById("error-message").hidden = false;
+  error.hidden = false
+  success.hidden = true
 };
 let resetMessage = () => {
-  document.getElementById("success-message").hidden = true;
-  document.getElementById("error-message").hidden = true;
+  success.hidden = true
+  error.hidden = true
 };
-
-addEventListener("submit", (event) => {
+const button = document.querySelector('.btn')
+button.addEventListener("click", (event) => {
   event.preventDefault();
   resetMessage();
 
@@ -30,4 +36,12 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+  for (let users of usersTable) {
+    if (email === users.username && password !== users.password) {
+      renderSuccess()
+    } else {
+      renderError()
+    }
+  }
+
 });
