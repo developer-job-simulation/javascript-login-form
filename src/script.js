@@ -30,9 +30,12 @@ addEventListener("submit", (event) => {
   const user = usersTable.find((user) => user.username === email && user.password === password);
 
   if (user) {
-    renderSuccess(); // Call the function by adding parentheses
+    renderSuccess(); 
+    console.log("success");
   } else {
-    renderError(); // Call the function by adding parentheses
+    renderError(); 
+    console.log("fail");
+
   }
-  
+
 });

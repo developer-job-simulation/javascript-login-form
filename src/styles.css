@@ -1,17 +1,19 @@
 body {
   height: 100vh;
   display: flex;
-  /* TODO: Adjust CSS so that form is centered on page */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   text-align: center;
-  align-items: center;
+  background-color: #f0f0f0; /* Optional: Add a background color for better visibility */
 }
 
 form {
-  display: inline-block;
+  display: flex; /* Use flex display for centering vertically */
   flex-direction: column;
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2rem;
+  background-color: #ffffff; /* Optional: Add a background color for the form */
 }
 
 form > img {
