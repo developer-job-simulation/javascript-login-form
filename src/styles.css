@@ -2,11 +2,12 @@ body {
   height: 100vh;
   display: flex;
   /* TODO: Adjust CSS so that form is centered on page */
+  text-align: center;
   align-items: center;
 }
 
 form {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   border: 1px solid black;
   padding: 2rem;

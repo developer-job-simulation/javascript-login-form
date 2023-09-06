@@ -24,10 +24,15 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
+
+
+  // Use the find method to check if the email and password combination exists in the usersTable
+  const user = usersTable.find((user) => user.username === email && user.password === password);
+
+  if (user) {
+    renderSuccess(); // Call the function by adding parentheses
+  } else {
+    renderError(); // Call the function by adding parentheses
+  }
+  
 });
