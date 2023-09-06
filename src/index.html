@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobSimulator.dev</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
@@ -9,7 +10,7 @@
   <body>
     <form>
       <!-- Fixed Logo Rendering Issue-->
-      <img src="logo.svg" />
+      <img src="logo.svg" alt="logo"/>
       <span id="success-message" hidden="true">Success!</span>
       <span id="error-message" hidden="true">Invalid Credentials</span>
       <label for="email">Email</label>
@@ -18,7 +19,7 @@
       <label for="password">Password</label>
       <!-- Updated HTML Password Input to Hide Password Visibility -->
       <input id="password" type="password" placeholder="Enter your password" />
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
