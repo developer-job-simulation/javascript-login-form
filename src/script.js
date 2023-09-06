@@ -31,11 +31,7 @@ addEventListener("submit", (event) => {
 
   if (user) {
     renderSuccess(); 
-    console.log("success");
   } else {
     renderError(); 
-    console.log("fail");
-
   }
-
 });
