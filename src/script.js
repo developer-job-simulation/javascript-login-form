@@ -31,3 +31,26 @@ addEventListener("submit", (event) => {
     3. If they are not, call renderError()
    */
 });
+
+addEventListener("submit", (event) => {
+  event.preventDefault();
+  resetMessage();
+
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  console.log(`email submitted: ${email}`);
+  console.log(`password submitted: ${password}`);
+
+  // 1. Check if the email and password are valid (using the usersTable)
+  const user = usersTable.find((user) => user.username === email && user.password === password);
+
+  if (user) {
+    // 2. If they are, call renderSuccess()
+    renderSuccess();
+  } else {
+    // 3. If they are not, call renderError()
+    renderError();
+  }
+});
+
