@@ -22,12 +22,12 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-  console.log(`email submitted: ${email}`);
-  console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
+  if (
+    usersTable.map((user) => user.username).includes(email) &&
+    usersTable.map((user) => user.password).includes(password)
+  ) {
+    return renderSuccess();
+  } else {
+    renderError();
+  }
 });
