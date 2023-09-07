@@ -1,21 +1,19 @@
 body {
   height: 100vh;
   display: flex;
+  align-items:center;
+  justify-content: center;
   /* TODO: Adjust CSS so that form is centered on page */
   align-items: center;
 }
 
 form {
-  margin-left:auto;
-  margin-right:auto;
   display: flex;
   flex-direction: column;
-  align-items:center;
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2rem;
 }
-
 form > img {
   margin: auto;
 }
