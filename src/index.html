@@ -9,16 +9,35 @@
   <body>
     <form>
       <!-- TODO: Fix Logo Rendering Issue-->
-      <img src="/logo.png" />
+      <img src="/logo.svg" />
       <span id="success-message" hidden="true">Success!</span>
       <span id="error-message" hidden="true">Invalid Credentials</span>
       <label for="email">Email</label>
       <!-- TODO: Add HTML Email Validation to Email Input -->
-      <input id="email" type="text" placeholder="Enter your email" />
+      <input type="email" id="email" type="text" placeholder="Enter your email" />
       <label for="password">Password</label>
       <!-- TODO: Update HTML Password Input to Hide Password Visibility -->
       <input id="password" type="text" placeholder="Enter your password" />
       <button>Submit</button>
     </form>
+    <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+        // prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+    </script>
   </body>
 </html>
