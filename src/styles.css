@@ -6,8 +6,11 @@ body {
 }
 
 form {
+  margin-left:auto;
+  margin-right:auto;
   display: flex;
   flex-direction: column;
+  align-items:center;
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2rem;
