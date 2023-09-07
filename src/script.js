@@ -15,6 +15,8 @@ let resetMessage = () => {
   document.getElementById("error-message").hidden = true;
 };
 
+
+
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
@@ -30,4 +32,20 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+
+  let found = false; // Initialize a flag to track whether a matching user is found
+
+  for (const user of usersTable) {
+    if (user.username === email && user.password === password) {
+      found = true; // Set the flag to true if a match is found
+      break;
+    }
+  }
+
+  if (found) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
+
 });
