@@ -1,4 +1,3 @@
-// const form = document.getElementsByTagName("form")[0];
 const usersTable = [
   // Note: This is a fake table for educational purposes. Never store user credentials in plain text.
   { id: 1, username: "hello@world.com", password: "badpassword" },
