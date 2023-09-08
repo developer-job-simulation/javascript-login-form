@@ -1,3 +1,4 @@
+// const form = document.getElementsByTagName("form")[0];
 const usersTable = [
   // Note: This is a fake table for educational purposes. Never store user credentials in plain text.
   { id: 1, username: "hello@world.com", password: "badpassword" },
@@ -24,10 +25,12 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  
+
   let user = usersTable.find((user) => user.username === email);
   if (user && user.password === password) {
     renderSuccess();
   }
-  renderError();
+  else{
+    renderError();
+  }
 });
