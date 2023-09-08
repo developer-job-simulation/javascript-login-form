@@ -13,6 +13,13 @@ form {
   border-radius: 2rem;
 }
 
+#form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 form > img {
   margin: auto;
 }
