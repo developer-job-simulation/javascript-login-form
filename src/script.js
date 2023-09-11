@@ -22,6 +22,32 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
+  let success = false;
+
+  for(let i = 0; i < usersTable.length; i++) {
+    if(usersTable[i].username == email.toLowerCase() && usersTable[i].password == password) {
+      console.log("Match")
+      success = true;
+      renderSuccess();
+    }
+  }
+
+  if(!success) {
+    renderError();
+  }
+
+  // if (String(email)
+  // .toLowerCase()
+  // .match(
+  //   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  // )) {
+  //   renderSuccess();
+  //   console.log(`email submitted: ${email}`);
+  // } else {
+  //   renderError();
+  //   console.log('Email not valid');
+  // }
+
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
   /*
