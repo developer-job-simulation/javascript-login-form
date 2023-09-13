@@ -25,8 +25,6 @@ addEventListener("submit", (event) => {
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
 
-
-
   let user = usersTable.find(user => user.username === email);
   if (password === user.password) {
     return renderSuccess()
