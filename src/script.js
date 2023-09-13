@@ -18,20 +18,18 @@ let resetMessage = () => {
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
-
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-
-  let user = usersTable.find(user => user.username === email);
-  if (password === user.password) {
-    return renderSuccess()
-  } else {
-    return renderError()
+  let user = usersTable.find((user) => user.username === email);
+  if (user.password === password) {
+    renderSuccess();
   }
-}
+  else{
+    renderError();
+  }
+});
 
   /*
     TODO:
@@ -39,4 +37,3 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
-});
