@@ -24,12 +24,12 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  const user = usersTable.find((user) => user.username === email && user.password === password);
-
-  if (user) {
+  let user = usersTable.find((user) => user.username === email);
+  if (user && user.password === password) {
     renderSuccess();
-  } 
-  else {
+  }
+  else{
     renderError();
+  }
   }
 });
