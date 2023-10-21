@@ -35,7 +35,7 @@ addEventListener("submit", (event) => {
       if (user.username == email && user.password == password){
         return renderSuccess()
       } else {
-        renderError()
+       return renderError()
       }
     })
 });
