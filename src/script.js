@@ -33,9 +33,9 @@ addEventListener("submit", (event) => {
 
     usersTable.map(user => {
       if (user.username == email && user.password == password){
-        return renderSuccess()
+        renderSuccess()
       } else {
-       return renderError()
+       renderError()
       }
     })
 });
