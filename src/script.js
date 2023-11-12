@@ -4,6 +4,7 @@ const usersTable = [
   { id: 2, username: "test@user.com", password: "badpassword" },
   { id: 3, username: "email@domain.com", password: "badpassword" },
 ];
+
 let renderSuccess = () => {
   document.getElementById("success-message").hidden = false;
 };
@@ -15,7 +16,9 @@ let resetMessage = () => {
   document.getElementById("error-message").hidden = true;
 };
 
-addEventListener("submit", (event) => {
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
 
@@ -30,4 +33,10 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+  const found = usersTable.find((user) => user.username === email && user.password === password);
+  if (found) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
 });
