@@ -16,9 +16,7 @@ let resetMessage = () => {
   document.getElementById("error-message").hidden = true;
 };
 
-const form = document.getElementById("form");
-
-form.addEventListener("submit", (event) => {
+addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
 
