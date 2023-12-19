@@ -25,18 +25,6 @@ document.getElementById("show-password").addEventListener("change", function () 
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Your JavaScript code that interacts with the DOM goes here
-
-  // For example, you can access the 'embed' element here
-  var embedElement = document.querySelector("embed");
-  if (embedElement) {
-    var src = embedElement.getAttribute("src");
-    console.log("Embed element src:", src);
-  }
-});
-
-
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
