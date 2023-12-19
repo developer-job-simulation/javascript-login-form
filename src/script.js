@@ -28,11 +28,13 @@ document.getElementById("show-password").addEventListener("change", function () 
 document.addEventListener("DOMContentLoaded", function() {
   // Your JavaScript code that interacts with the DOM goes here
 
-  // For example, you can access the 'embed' element here
+  // Check if the 'embed' element exists before accessing its 'src' attribute
   var embedElement = document.querySelector("embed");
   if (embedElement) {
     var src = embedElement.getAttribute("src");
-    console.log("Embed element src:", src);
+    if (src) {
+      console.log("Embed element src:", src);
+    }
   }
 });
 
