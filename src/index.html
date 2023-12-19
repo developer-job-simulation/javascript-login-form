@@ -20,7 +20,12 @@
       <!-- TODO: Update HTML Password Input to Hide Password Visibility -->
 
       <input id="password" type="password" placeholder="Enter your password" />
-      <input type="checkbox" id="show-password" />Show Password
+
+      <div class="checkbox-container" span id="show-password">
+        <input type="checkbox" id="show-password" />
+        <label for="show-password">Show Password</label>
+      </div>
+      
       <button id="submit-button">Submit</button>
     </form>
     <script src="script.js"></script>
