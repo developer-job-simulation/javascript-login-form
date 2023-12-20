@@ -25,20 +25,6 @@ document.getElementById("show-password").addEventListener("change", function () 
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Your JavaScript code that interacts with the DOM goes here
-
-  // Check if the 'embed' element exists before accessing its 'src' attribute
-  var embedElement = document.querySelector("embed");
-  if (embedElement) {
-    var src = embedElement.getAttribute("src");
-    if (src) {
-      console.log("Embed element src:", src);
-    }
-  }
-});
-
-
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
