@@ -30,4 +30,12 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+  const validUser = usersTable.some((user) => {
+    return user.username === email && user.password === password;
+  });
+  if (validUser) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
 });
