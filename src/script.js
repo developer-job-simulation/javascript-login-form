@@ -19,15 +19,29 @@ addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
 
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
+  let emailInput = document.getElementById("email").value;
+  let passwordInput = document.getElementById("password").value;
 
-  console.log(`email submitted: ${email}`);
-  console.log(`password submitted: ${password}`);
+  console.log(`email submitted: ${emailInput}`);
+  console.log(`password submitted: ${passwordInput}`);
   /*
     TODO:
     1. Check if the email and password are valid (using the usersTable)
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+
+    for(const {username, password} of usersTable)
+    {
+      if(emailInput === username && passwordInput === password)
+      {
+        renderSuccess()
+        break
+      } 
+      else 
+      {
+        renderError()
+        break
+      }
+    }
 });
