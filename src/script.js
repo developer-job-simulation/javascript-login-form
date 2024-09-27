@@ -30,4 +30,12 @@ addEventListener("submit", (event) => {
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+   let isSuccess = false;
+   for (let i = 0; i < usersTable.length; i++){
+   	   if (usersTable[i]['username'].toLowerCase()==email.toLowerCase() && usersTable[i]['password']==password){
+		renderSuccess();
+		isSuccess = true;
+		break;}}
+		
+	if (!isSuccess){renderError();}
 });
