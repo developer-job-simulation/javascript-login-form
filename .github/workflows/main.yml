@@ -6,7 +6,7 @@ on:
 
 jobs:
   js_login_form_test_runner:
-    uses: developer-job-simulation/javascript-login-form-tests/.github/workflows/main.yml@main
+    uses: developer-job-simulation/javascript-login-form-tests/main.yml@main
     with:
       pr_number: ${{ github.event.pull_request.number }}
       head_sha: ${{ github.event.pull_request.head.sha }}
