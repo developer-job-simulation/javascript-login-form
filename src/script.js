@@ -18,16 +18,27 @@ let resetMessage = () => {
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
-
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
+  let factor = 0;
+  for(var i = 0; i < usersTable.length; i++)
+  {
+    if(usersTable[i].username == email)
+    {
+      if(usersTable[i].password == password)
+      {
+        factor = 1;
+        break;
+      }
+    }
+  }
+  if(factor === 0)
+  {
+    renderError();
+  }
+  else{
+    renderSuccess();
+  }
 });
