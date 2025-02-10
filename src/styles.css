@@ -3,14 +3,24 @@ body {
   display: flex;
   /* TODO: Adjust CSS so that form is centered on page */
   align-items: center;
+  justify-content: center;
+  background-color: #497d74;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.3em;
+}
+
+.label {
+  font-weight: bold;
+  padding-bottom: 1em;
 }
 
 form {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  border: 1px solid black;
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 2rem;
+  background-color: #efe9d5;
 }
 
 form > img {
@@ -24,13 +34,24 @@ label {
 }
 
 input {
-  width: 100%;
+  /* width: 100%; */
+  border-radius: 1em;
+  border: 1px solid black;
+  padding: 1em;
+}
+
+input:focus {
+  border: 2px solid #71bbb2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(113, 187, 178, 0.8); Adds a subtle glow effect
 }
 
 button {
+  background-color: #27445d;
+  border: none;
+  border-radius: 1em;
   margin: 1rem 0 0 0;
 }
-
 #success-message {
   color: green;
 }
