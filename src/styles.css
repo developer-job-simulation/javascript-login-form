@@ -2,6 +2,8 @@ body {
   height: 100vh;
   display: flex;
   /* TODO: Adjust CSS so that form is centered on page */
+  justify-content: center;/*Justify content is used to manage postioning along 
+                            the main axis,the flex direction by default is row. Then justify content affects horizontal position*/
   align-items: center;
 }
 
