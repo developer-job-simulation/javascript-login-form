@@ -4,12 +4,15 @@ const usersTable = [
   { id: 2, username: "test@user.com", password: "badpassword" },
   { id: 3, username: "email@domain.com", password: "badpassword" },
 ];
+
 let renderSuccess = () => {
   document.getElementById("success-message").hidden = false;
 };
+
 let renderError = () => {
   document.getElementById("error-message").hidden = false;
 };
+
 let resetMessage = () => {
   document.getElementById("success-message").hidden = true;
   document.getElementById("error-message").hidden = true;
@@ -24,10 +27,13 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
+
+  // Check if the email and password are valid (using the usersTable)
+  let user = usersTable.find((user) => user.username === email && user.password === password);
+
+  if (user) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
 });
