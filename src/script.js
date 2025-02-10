@@ -15,6 +15,12 @@ let resetMessage = () => {
   document.getElementById("error-message").hidden = true;
 };
 
+async function displayTooltip() {
+  document.getElementById("tooltip-text").hidden = false;
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  document.getElementById("tooltip-text").hidden = true;
+}
+
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
@@ -24,10 +30,13 @@ addEventListener("submit", (event) => {
 
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
-  /*
-    TODO:
-    1. Check if the email and password are valid (using the usersTable)
-    2. If they are, call renderSuccess()
-    3. If they are not, call renderError()
-   */
+  
+  let found = usersTable.some((user) => user.username === email && 
+    user.password === password);
+
+  if(found) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
 });
