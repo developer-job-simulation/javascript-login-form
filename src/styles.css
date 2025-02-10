@@ -11,6 +11,7 @@ form {
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2rem;
+  margin: auto;
 }
 
 form > img {
