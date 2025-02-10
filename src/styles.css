@@ -1,6 +1,9 @@
 body {
   height: 100vh;
   display: flex;
+  width: fit-content;
+  margin: auto;
+  
   /* TODO: Adjust CSS so that form is centered on page */
   align-items: center;
 }
@@ -11,6 +14,7 @@ form {
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2rem;
+  margin: auto;
 }
 
 form > img {
@@ -27,6 +31,13 @@ input {
   width: 100%;
 }
 
+input:invalid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+
 button {
   margin: 1rem 0 0 0;
 }
@@ -38,3 +49,31 @@ button {
 #error-message {
   color: red;
 }
+
+.invalid-email{
+	position: absolute;
+	max-width: 30em;
+	background-color: #fff;
+	padding: 1.125em 1.5em;
+	font-size: 1.25em;
+	border-radius: 1rem;
+  box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+  font-weight: 500;
+  margin-top: 11%;
+  
+}
+
+.invalid-email::before{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 1.5em; 
+	border: .75rem solid transparent;
+	border-top: none;
+  border-bottom-color: #fff;
+	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .5));
+  
+}
+
