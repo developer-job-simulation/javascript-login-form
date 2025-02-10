@@ -15,6 +15,16 @@ let resetMessage = () => {
   document.getElementById("error-message").hidden = true;
 };
 
+document.getElementById("show-password").addEventListener("change", function () {
+  var password = document.getElementById("password");
+
+  if (this.checked) {
+    password.type = "text";
+  } else {
+    password.type = "password";
+  }
+});
+
 addEventListener("submit", (event) => {
   event.preventDefault();
   resetMessage();
@@ -25,9 +35,19 @@ addEventListener("submit", (event) => {
   console.log(`email submitted: ${email}`);
   console.log(`password submitted: ${password}`);
   /*
-    TODO:
+    done:
     1. Check if the email and password are valid (using the usersTable)
     2. If they are, call renderSuccess()
     3. If they are not, call renderError()
    */
+  const user = usersTable.find(
+    (user) => user.username === email && user.password === password
+  );
+
+  if (user) {
+    renderSuccess();
+  } else {
+    renderError();
+  }
 });
+
