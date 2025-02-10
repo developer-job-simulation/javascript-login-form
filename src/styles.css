@@ -1,6 +1,7 @@
 body {
   height: 100vh;
   display: flex;
+  justify-content: center;
   /* TODO: Adjust CSS so that form is centered on page */
   align-items: center;
 }
